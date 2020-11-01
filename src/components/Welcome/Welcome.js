@@ -7,7 +7,10 @@ const welcome = () => {
   return (
     <div>
       <div className="container align-items-center">
-        <h1 className="display-2 pt-5">Welcome to Twinkle Weathers!</h1>
+        <h1 className="display-2 pt-5 d-none d-sm-block">
+          Welcome to Twinkle Weathers!
+        </h1>
+        <h2 className="pt-5 d-block d-sm-none">Welcome to Twinkle Weathers!</h2>
         <p className="lead pt-4">Piece of Sharan Industries.</p>
         <h1 className="display-4 pt-5  d-none d-sm-block">
           Mapbox
