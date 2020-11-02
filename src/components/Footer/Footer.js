@@ -2,7 +2,14 @@ import React from "react";
 import classes from "./Footer.css";
 
 const footer = () => {
-  return <div className={classes.Footer}>&#169; 2020 Sharan Industries</div>;
+  return (
+    <div className={classes.Footer}>
+      &#169; 2020 Sharan Industries.
+      <div className="float-right">
+        Page designed by Sharan K and Logo designed by Shahrukh Parvez.
+      </div>
+    </div>
+  );
 };
 
 export default footer;

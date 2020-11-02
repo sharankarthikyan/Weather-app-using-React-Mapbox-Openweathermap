@@ -36,7 +36,7 @@ const input = (props) => {
       <Form onSubmit={props.Submit}>
         <Row>
           <Col md={{ span: 6, offset: 3 }}>
-            <h5>Find the weather of Any places :)</h5>
+            <h5>Find the weather of any place :)</h5>
           </Col>
         </Row>
         <Row className="pt-3">
