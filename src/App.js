@@ -4,6 +4,7 @@ import Main from "./components/Main";
 import axios from "axios";
 import MapGL from "react-map-gl";
 import Pins from "./components/Pins";
+import Footer from "./components/Footer/Footer";
 
 const MAPBOX_TOKEN =
   "pk.eyJ1Ijoic2hhcmFuayIsImEiOiJja2dxZWd6NTUwMHMyMzBreWMyeG9ibGlqIn0.e_e0U1tzKglQNrn4jX09sg";
@@ -81,20 +82,22 @@ class App extends Component {
 
     if (this.state.latitude !== "" && this.state.longitude !== "") {
       map = (
-        <MapGL
-          {...this.state}
-          width="100vw"
-          height="100vh"
-          mapStyle="mapbox://styles/mapbox/streets-v11"
-          onViewportChange={(viewport) => this.setState({ viewport })}
-          mapboxApiAccessToken={MAPBOX_TOKEN}
-        >
-          <Pins
-            latitude={this.state.latitude}
-            longitude={this.state.longitude}
-            onClick={this._onClickMarker}
-          />
-        </MapGL>
+        <div className="Map">
+          <MapGL
+            {...this.state}
+            width="80vw"
+            height="80vh"
+            mapStyle="mapbox://styles/mapbox/streets-v11"
+            onViewportChange={(viewport) => this.setState({ viewport })}
+            mapboxApiAccessToken={MAPBOX_TOKEN}
+          >
+            <Pins
+              latitude={this.state.latitude}
+              longitude={this.state.longitude}
+              onClick={this._onClickMarker}
+            />
+          </MapGL>
+        </div>
       );
     }
 
@@ -110,7 +113,12 @@ class App extends Component {
           temperature={this.state.temperature}
           feels_like={this.state.feels_like}
         />
-        <div>{map}</div>
+        <div>
+          <div className="d-flex justify-content-center">
+            <div>{map}</div>
+          </div>
+        </div>
+        <Footer />
       </div>
     );
   }
