@@ -60,6 +60,11 @@ const input = (props) => {
           </Col>
         </Row>
         {a}
+        <Row className="pt-3">
+          <Col md={{ span: 8, offset: 3 }}>
+            <p>{props.error}</p>
+          </Col>
+        </Row>
       </Form>
     </div>
   );

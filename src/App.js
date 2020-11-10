@@ -22,6 +22,7 @@ class App extends Component {
     zoom: 10,
     bearing: 0,
     pitch: 0,
+    error: "",
   };
 
   handleChange = (event) => {
@@ -70,14 +71,13 @@ class App extends Component {
               });
             })
             .catch((error) => {
-              console.log(error);
+              this.setState({ error: "Something went wrong :(" });
             });
         })
         .catch((error) => {
-          this.setState({ error: true });
+          this.setState({ error: "Something went wrong :(" });
         });
       this.setState({ count: 2 });
-      console.log(this.state);
     }
 
     if (this.state.latitude !== "" && this.state.longitude !== "") {
@@ -112,6 +112,7 @@ class App extends Component {
           description={this.state.description}
           temperature={this.state.temperature}
           feels_like={this.state.feels_like}
+          error={this.state.error}
         />
         <div>
           <div className="d-flex justify-content-center">

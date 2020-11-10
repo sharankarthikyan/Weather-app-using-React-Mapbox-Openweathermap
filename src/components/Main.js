@@ -17,6 +17,7 @@ const main = (props) => {
         description={props.description}
         temperature={props.temperature}
         feels_like={props.feels_like}
+        error={props.error}
       />
     </div>
   );

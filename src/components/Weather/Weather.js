@@ -16,6 +16,7 @@ class weather extends Component {
             description={this.props.description}
             temperature={this.props.temperature}
             feels_like={this.props.feels_like}
+            error={this.props.error}
           />
         </div>
       </div>
