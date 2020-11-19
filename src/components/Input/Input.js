@@ -17,7 +17,8 @@ const input = (props) => {
         <Row className="pt-3">
           <Col md={{ span: 6, offset: 3 }}>
             It is {props.description} with the temperature of{" "}
-            {props.temperature} degree and It's feels like {props.feels_like}.
+            {props.temperature} degree celsius and It's feels like{" "}
+            {props.feels_like} degree celsius.
           </Col>
         </Row>
         <Row className="pt-3">
