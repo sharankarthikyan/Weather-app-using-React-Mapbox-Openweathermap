@@ -7,7 +7,7 @@ const header = () => {
     <Navbar bg="light" variant="light">
       <div className="container">
         <Navbar.Brand href="/">
-          <img src={Brand} alt="" width="150px" />
+          <img src={Brand} alt="" width="100px" />
         </Navbar.Brand>
       </div>
     </Navbar>
