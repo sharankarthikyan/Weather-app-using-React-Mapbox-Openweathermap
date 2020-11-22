@@ -10,15 +10,15 @@ const input = (props) => {
   if (props.latitude !== "" && props.longitude !== "") {
     a = (
       <div>
-        <Row className="pt-3">
-          <Col md={{ span: 3, offset: 3 }}>Latitude: {props.latitude}</Col>
-          <Col md={{ span: 3, offset: 0 }}>Longitude: {props.longitude}</Col>
-        </Row>
+        {/*<Row className="pt-3">*/}
+        {/*  <Col md={{ span: 3, offset: 3 }}>Latitude: {props.latitude}</Col>*/}
+        {/*  <Col md={{ span: 3, offset: 0 }}>Longitude: {props.longitude}</Col>*/}
+        {/*</Row>*/}
         <Row className="pt-3">
           <Col md={{ span: 6, offset: 3 }}>
             It is {props.description} with the temperature of{" "}
-            {props.temperature} degree celsius and It's feels like{" "}
-            {props.feels_like} degree celsius.
+            <strong>{props.temperature}</strong> degree celsius and It's feels
+            like <strong>{props.feels_like}</strong> degree celsius.
           </Col>
         </Row>
         <Row className="pt-3">
