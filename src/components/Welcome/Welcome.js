@@ -11,10 +11,6 @@ const welcome = () => {
           Welcome to Twinkle Weathers!
         </h1>
         <h2 className="pt-5 d-block d-sm-none">Welcome to Twinkle Weathers!</h2>
-//         <p className="lead pt-4 d-none d-sm-block">
-//           Piece of Sharan Industries.
-//         </p>
-//         <p className="pt-4 d-block d-sm-none">Piece of Sharan Industries.</p>
         <h1 className="display-4 pt-5  d-none d-sm-block">
           Mapbox
           <img src={mapboxicon} alt="" width="50" />
